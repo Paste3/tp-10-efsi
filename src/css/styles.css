@@ -1,0 +1,238 @@
+
+
+:root {
+    --body-text-color: #5c5957;
+    --body-bg-color: #e2d9d5;
+    --card-border-color: #e2d9d5;
+    --card-bg-color: #fff;
+    --dashed-color: #fafafa;
+    --red: #e31b23;
+    --offset-before: 8px;
+    --offset-after: 16px;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  hr {
+    border-color: var(--dashed-color);
+  }
+
+.card {
+    cursor: pointer;
+  }
+  
+  .card::before,
+
+  .card::before,
+  .card::after,
+  .card .card-inner {
+    background-color: var(--card-bg-color);
+    border: 1px solid var(--card-border-color);
+    border-radius: 5px;
+    transition: transform 0.3s;
+  }
+  
+  .card::before,
+  .card-inner {
+    z-index: 1;
+  }
+  
+  .card-inner {
+
+    padding: 3rem;
+  }
+  
+  .img50px{
+    height: 50;
+  }
+
+  /*TOP LEFT*/
+  .card-top-left::before {
+    transform: translate(
+      calc(-1 * var(--offset-before)),
+      calc(-1 * var(--offset-before))
+    );
+  }
+  
+  .card-top-left::after {
+    transform: translate(
+      calc(-1 * var(--offset-after)),
+      calc(-1 * var(--offset-after))
+    );
+  }
+  
+  
+  
+  /*TOP RIGHT*/
+  .card-top-right::before {
+    transform: translate(var(--offset-before), calc(-1 * var(--offset-before)));
+  }
+  
+  .card-top-right::after {
+    transform: translate(var(--offset-after), calc(-1 * var(--offset-after)));
+  }
+
+  
+  
+  /*BOTTOM LEFT*/
+  .card-bottom-left::before {
+    transform: translate(calc(-1 * var(--offset-before)), var(--offset-before));
+  }
+  
+  .card-bottom-left::after {
+    transform: translate(calc(-1 * var(--offset-after)), var(--offset-after));
+  }
+  
+  .card-bottom-left:hover::before,
+  .card-bottom-left:hover::after,
+  .card-bottom-left:hover .card-inner {
+    transform: translate(calc(-1 * var(--offset-before)), 0);
+  }
+  
+  
+  /*BOTTOM RIGHT*/
+  .card-bottom-right::before {
+    transform: translate(var(--offset-before), var(--offset-before));
+  }
+  
+  .card-bottom-right::after {
+    transform: translate(var(--offset-after), var(--offset-after));
+  }
+
+  
+  /*DIAGONAL FROM RIGHT*/
+  .card-diagonal-from-right::before {
+    transform: translate(var(--offset-before), calc(-1 * var(--offset-before)));
+  }
+  
+  .card-diagonal-from-right::after {
+    transform: translate(var(--offset-after), calc(-1 * var(--offset-after)));
+  }
+
+  
+  
+  /*DIAGONAL FROM LEFT*/
+  .card-diagonal-from-left::before {
+    transform: translate(
+      calc(-1 * var(--offset-before)),
+      calc(-1 * var(--offset-before))
+    );
+  }
+  
+  .card-diagonal-from-left::after {
+    transform: translate(
+      calc(-1 * var(--offset-after)),
+      calc(-1 * var(--offset-after))
+    );
+  }
+  
+  
+  
+  /*ROTATE*/
+  .card-rotate::before {
+    transform: rotate(-10deg);
+  }
+  
+  .card-rotate::after {
+    transform: rotate(10deg);
+  }
+  
+  
+  /*PERSPECTIVE*/
+  .card-perspective {
+    perspective: 700px;
+    /*You can change the origin if you want e.g. perspective-origin: top;*/
+  }
+  
+  .card-perspective::before {
+    transform: rotateY(-15deg) translateX(16px);
+  }
+  
+  .card-perspective::after {
+    transform: rotateY(-15deg) translateX(32px);
+  }
+  
+  .card-perspective .card-inner {
+    transform: rotateY(-15deg);
+  }
+  
+  
+  /*ORIGIN*/
+  .card-origin {
+    perspective: 1000px;
+    /*You can change the origin if you want e.g. perspective-origin: top;*/
+  }
+  
+  .card-origin::before,
+  .card-origin::after,
+  .card-origin .card-inner {
+    transform-origin: top;
+  }
+  
+  .card-origin::before {
+    transform: rotateX(37deg);
+  }
+  
+  .card-origin::after {
+    transform: rotateX(18deg);
+  }
+  
+  .card-origin .card-inner {
+    transform: rotateX(45deg);
+  }
+  
+  
+ .hr {
+    height: 10px;
+    background-color: hsl(187, 90%, 50%);
+  }
+
+   
+footer{
+    color: rgb(0, 0, 0);
+    text-decoration:none;
+  }
+
+  
+   .Div_Hijo{
+  
+    display:inline-block
+   }
+   .Img{
+    
+    display:inline;
+   }
+   .container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+div {
+  display: block;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
+  background-color: #fff;
+}
